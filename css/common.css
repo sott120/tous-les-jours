@@ -1,3 +1,4 @@
+/* 로컬폰트 생성 */
 @font-face {
     font-family: "point_type";
     src: url(../fonts/cormorantgaramond-bold.woff) format("woff");
@@ -10,14 +11,144 @@
     font-family: "basic_type";
     src: url(../fonts/NotoSansKR-Regular.otf) format("opentype");
 }
+@font-face {
+    font-family: "basic_light";
+    src: url(../fonts/NotoSansKR-Light.otf) format("opentype");
+}
+@font-face {
+    font-family: "basic_med";
+    src: url(../fonts/NotoSansKR-Medium.otf) format("opentype");
+}
+@font-face {
+    font-family: "basic_bold";
+    src: url(../fonts/NotoSansKR-Bold.otf) format("opentype");
+}
 
-* {
+/* 전체 기본폰트 적용 */
+body {
     font-family: basic_type;
     font-size: 17px;
     letter-spacing: -1px;
     word-break: keep-all;
 }
 
+/* 이미지 렌더링방식 변경 */
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+/*****************************헤더 시작*****************************/
+header {
+    width: 100%;
+    height: 120px;
+    background-color: #074c43;
+    font-family: "Noto Sans KR", sans-serif;
+}
+.h_container {
+    max-width: 1760px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+}
+.h_logo {
+    width: 264px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.h_logo > a > img {
+    width: 100%;
+}
+.h_nav {
+    width: 665px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h_nav > li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.h_nav > li > a {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.h_nav > li > .active_hnav > p:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #f26a25;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.h_nav > li > .active_hnav > p {
+    transition: all 0.5s ease-in-out;
+}
+.h_nav > li:hover .active_hnav > p {
+    color: #f26a25;
+}
+.h_nav > li:hover .active_hnav > p:after {
+    opacity: 1;
+    width: 100%;
+}
+
+.h_btn {
+    width: 103px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.h_btn > li {
+    display: flex;
+    align-items: center;
+}
+
+.h_btn > li > .hbtn_search {
+    display: block;
+    width: 30px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h_btn > li > .hbtn_search > div {
+    background-image: url(../img/btn_search.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 21px;
+    height: 21px;
+    transition: all 0.5s ease-in-out;
+}
+.h_btn > li > .active_hbtn {
+    font-size: 17px;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+.h_btn > li:hover .active_hbtn {
+    color: #f26a25;
+}
+.h_btn > li:hover .hbtn_search > div {
+    background-image: url(../img/btn_search_orange.png);
+}
+.h_mobnav {
+    display: none;
+}
+
+/*************************** 타이틀 시작 **************************/
 .title {
     width: 100%;
     margin-top: 75px;
@@ -33,7 +164,7 @@
     letter-spacing: 0;
 }
 
-/* 첫번째 리스트 */
+/* 타이틀 첫번째 리스트 */
 .title_nav1 {
     position: relative;
     z-index: 12;
@@ -41,10 +172,17 @@
     text-align: center;
 }
 
+.title_nav1 .active {
+    color: #074c43;
+    font-weight: bold;
+    border-bottom: 2px solid #074c43;
+}
+
 .title_nav1 li {
     display: inline-block;
     padding: 15px 0;
 }
+
 .title_nav1 li:hover a {
     color: #074c43;
     text-decoration: none;
@@ -85,12 +223,6 @@
     transition: all 0.5s ease;
 }
 
-.title_nav1 .active {
-    color: #074c43;
-    font-weight: bold;
-    border-bottom: 2px solid #074c43;
-}
-
 /* 두번째 리스트 */
 .title_nav2 {
     position: relative;
@@ -98,6 +230,11 @@
     text-align: center;
     background-color: #f5f5f5;
     box-shadow: inset 0px 3px 5px 0px rgb(0 0 0 / 5%);
+}
+
+.title_nav2 .active {
+    color: #f26a25;
+    font-weight: 400;
 }
 
 .title_nav2 li {
@@ -124,12 +261,115 @@
     font-weight: 300;
     color: #777;
 }
-
-.title_nav2 .active {
-    color: #f26a25;
-    font-weight: 400;
+/*************************** 푸터 시작 **************************/
+footer {
+    width: 100%;
+    height: 359px;
 }
 
+.f_top_wrap {
+    width: 100%;
+    height: 310px;
+    background-color: #074c43;
+}
+
+.f_top {
+    max-width: 595px;
+    margin: auto;
+    padding: 30px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.f_top > h1 {
+    width: 100%;
+    height: 53px;
+    margin-bottom: 20px;
+}
+
+.f_top > h1 > a {
+    display: block;
+}
+
+.f_top img {
+    width: 268px;
+}
+
+.f_top_info > p {
+    color: #fff;
+    font-size: 16px;
+}
+
+.f_top_tel > p {
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.f_top_btn {
+    margin: 15px 0;
+}
+
+.f_top_btn > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.f_top_btn > ul > li {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0;
+}
+
+.f_top_btn > ul > li > a {
+    font-size: 13px;
+    color: #fff !important;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 145px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.f_top_sns > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.f_top_sns img {
+    width: 38px;
+    height: 39px;
+    margin: 0 5px;
+}
+
+.f_bot {
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    background-color: #f26a25;
+}
+
+.f_bot > p {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    padding: 15px 0;
+    font-family: "Barlow", sans-serif;
+    letter-spacing: 0;
+}
+
+/*--------------------media query width 1860px--------------------*/
+@media only screen and (max-width: 1860px) {
+    .h_container {
+        width: 100%;
+        max-width: 1860px;
+        padding: 0 30px;
+    }
+}
+
+/*--------------------media query width 1440px--------------------*/
 @media only screen and (max-width: 1440px) {
     .title_h2 {
         font-size: 52px;
@@ -140,9 +380,37 @@
         margin: 0 15px;
     }
 }
+
+/*--------------------media query width 1280px--------------------*/
 @media only screen and (max-width: 1280px) {
+    .h_nav {
+        width: 50%;
+    }
+    .h_nav > li > a {
+        padding: 0 6px;
+    }
 }
+
+/*--------------------media query width 989px--------------------*/
 @media only screen and (max-width: 989px) {
+    /* 헤더 */
+    .h_logo {
+        width: 180px;
+    }
+    .h_nav {
+        width: 48.5%;
+    }
+    .h_nav > li > a {
+        font-size: 15px;
+        padding: 0 4px;
+    }
+    .h_btn {
+        width: 11%;
+    }
+    .h_btn > li > .active_hbtn {
+        font-size: 15px;
+    }
+    /* 타이틀 */
     .title_h2 {
         font-size: 45px;
     }
@@ -163,7 +431,50 @@
         margin: 0 12px;
     }
 }
+
+/*--------------------media query width 767px--------------------*/
 @media only screen and (max-width: 767px) {
+    /* 헤더 */
+    header {
+        max-width: 767px;
+        height: 80px;
+    }
+    .h_container {
+        height: 80px;
+        padding: 0 33px 0 57px;
+    }
+    .h_nav {
+        display: none;
+    }
+    .h_btn {
+        display: none;
+    }
+    .h_mobnav {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .h_mobnav > a {
+        display: block;
+        width: 50px;
+        height: 50px;
+        padding: 16px 16.5px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .h_mobnav > a > span {
+        display: block;
+        width: 17px;
+        height: 2px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    /* 타이틀 */
     .title {
         margin-bottom: 50px;
     }
@@ -201,6 +512,136 @@
     .title_nav2 a {
         font-size: 14px;
     }
+
+    /* 푸터 */
+    footer {
+        height: 526px;
+    }
+    .f_top {
+        padding: 71px 0;
+    }
+    .f_top_wrap {
+        height: 471px;
+    }
+
+    .f_top_logo {
+        max-width: none;
+    }
+
+    .f_top_logo img {
+        width: 264px;
+    }
+
+    .f_top_info > p {
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    .f_top_info span {
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 300;
+    }
+
+    .f_top_tel > p {
+        font-size: 22px;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    .f_top_btn {
+        margin: 22px 0 30px;
+    }
+
+    .f_top_btn > ul > li {
+        line-height: 1.8em;
+        font-size: 15px;
+    }
+
+    .f_top_btn > ul > li > a {
+        font-size: 20px;
+        width: 228px;
+        height: 64px;
+        line-height: 64px;
+    }
+
+    .f_top_sns li {
+        width: 38px;
+        height: auto;
+    }
+
+    .f_top_sns img {
+        line-height: 1.8em;
+        width: 38px;
+        height: auto;
+    }
+
+    .f_bot > p {
+        font-size: 16px;
+    }
 }
+
+/*--------------------media query width 480px--------------------*/
 @media only screen and (max-width: 480px) {
+    footer {
+        height: 353px;
+    }
+
+    .f_top {
+        padding: 30px 0;
+    }
+
+    .f_top_wrap {
+        height: 310px;
+    }
+
+    .f_top_logo > h1 {
+        margin-bottom: 10px;
+    }
+
+    .f_top_logo img {
+        width: 190px;
+    }
+
+    .f_top_info > p {
+        font-size: 14px;
+    }
+
+    .f_top_info span {
+        font-size: 14px;
+    }
+
+    .f_top_tel > p {
+        font-size: 14px;
+        padding: 0 3px;
+    }
+
+    .f_top_btn {
+        margin: 15px 0 20px;
+    }
+
+    .f_top_btn > ul > li {
+        margin: 0 3px;
+    }
+
+    .f_top_btn > ul > li > a {
+        font-size: 14px;
+        width: 150px;
+        height: 45px;
+        line-height: 44px;
+    }
+
+    .f_top_sns li {
+        margin: 0 2px;
+    }
+
+    .f_top_sns img {
+        width: 32px;
+    }
+
+    .f_bot > p {
+        font-size: 12px;
+        padding: 12px 0;
+    }
 }

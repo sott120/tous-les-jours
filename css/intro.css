@@ -1,0 +1,130 @@
+/* 공통 폰트 사이즈  지정*/
+.intro h2 {
+    font-family: basic_light;
+    font-size: 53px;
+    letter-spacing: -5px;
+    color: #000;
+}
+
+.intro h3 {
+    font-family: point_type;
+    font-size: 138px;
+    letter-spacing: 0;
+    color: #074c43;
+}
+
+.intro h4 {
+    font-family: point_type;
+    font-size: 67px;
+    letter-spacing: 0;
+    color: #000;
+}
+
+.intro p {
+    letter-spacing: -1px;
+    color: #494949;
+}
+
+.intro b {
+    font-family: basic_bold;
+}
+
+.intro .bgtxt {
+    font-family: point_type;
+    font-size: 262px;
+}
+
+/* 메인배너 시작 */
+.intro_mainbnr {
+    width: 100%;
+}
+.mainbnr_img {
+    width: 100%;
+    padding-top: calc(635 / 1600 * 100%);
+    background-image: url(../img/intro/main_visual.png);
+    background-size: cover;
+    background-position: bottom;
+}
+.mainbnr_txt {
+    width: 100%;
+    height: 265px;
+    text-align: center;
+    background-color: #184f38;
+}
+
+.mainbnr_txt h2 {
+    font-family: basic_med;
+    color: #fff;
+}
+
+.mainbnr_txt p {
+    color: #ba835a;
+}
+
+/* 소개섹션 시작 */
+.intro_info {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 100px 0 0;
+    display: flex;
+}
+.intro_info::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    top: 0px;
+    background-image: url(../img/intro/dashed-line--bottom.png);
+}
+
+.intro_info .left_wrap {
+    flex: 1;
+}
+
+.intro_info .left_img {
+    width: 50%;
+    padding-top: calc(1001 / 830 * 100%);
+    background-image: url(../img/intro/);
+}
+
+.intro_info .right_wrap {
+    flex: 1;
+}
+
+.intro_info .right_img {
+    width: 100%;
+    height: auto;
+}
+
+/*--------------------media query width 989px--------------------*/
+@media only screen and (max-width: 989px) {
+}
+
+/*--------------------media query width 767px--------------------*/
+@media only screen and (max-width: 767px) {
+    .intro h2 {
+        font-size: 24px;
+        letter-spacing: -2px;
+    }
+
+    .intro h3 {
+        font-size: 45px;
+    }
+
+    .intro h4 {
+        font-size: 34px;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .intro .bgtxt {
+        font-size: 150px;
+    }
+}
+
+/*--------------------media query width 767px--------------------*/
+@media only screen and (max-width: 480px) {
+}
