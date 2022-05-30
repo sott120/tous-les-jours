@@ -4,6 +4,7 @@
     font-size: 53px;
     letter-spacing: -5px;
     color: #000;
+    line-height: 1.4;
 }
 
 .intro h3 {
@@ -28,8 +29,10 @@
     letter-spacing: 0;
     color: #000;
 }
+
 .intro p {
     letter-spacing: -1px;
+    line-height: 1.6;
     color: #494949;
     margin: 0.85em 0;
 }
@@ -42,15 +45,22 @@
     font-family: point_type;
     font-size: 262px;
     white-space: nowrap;
-    opacity: 0.1;
     position: relative;
     z-index: 0;
+}
+
+.intro section {
+    background-color: #fff;
 }
 
 /* 메인배너 시작 */
 .intro_mainbnr {
     width: 100%;
+    /* position: sticky;
+    top: 120px;
+    z-index: -1; */
 }
+
 .mainbnr_img {
     width: 100%;
     padding-top: calc(635 / 1600 * 100%);
@@ -58,9 +68,11 @@
     background-size: cover;
     background-position: bottom;
 }
+
 .mainbnr_txt {
     width: 100%;
     height: 265px;
+    padding: 0 20px;
     text-align: center;
     background-color: #184f38;
 }
@@ -82,13 +94,14 @@
     background-color: #fff;
     padding: 100px 0 0;
 }
+
 .intro_info_wrap::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 6px;
-    top: 0px;
-    background-image: url(../img/intro/dashed-line--bottom.png);
+    top: -6px;
+    background-image: url(../img/intro/dashed-line--top_white.png);
 }
 
 .intro_info1 {
@@ -97,13 +110,35 @@
 
 .intro_info1 .left_wrap {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .intro_info1 .left_img {
     width: 100%;
-    /* max-width: 458px; */
+    max-width: 458px;
+    margin-right: 120px;
+}
+
+.intro_info1 .left_txt {
+    padding-right: 16px
+}
+
+.intro_info1 h2 {
+    padding-top: 80px;
+
+}
+
+.intro_info1 p {
+    display: block;
+    max-width: 695px;
+    margin-bottom: 100px;
+}
+
+.intro_info1 .left_img .img1 {
+    width: 100%;
     padding-top: calc(563 / 458 * 100%);
-    margin-right: 125px;
     background-image: url(../img/intro/intro1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -112,22 +147,31 @@
 
 .intro_info1 .right_wrap {
     flex: 1;
-    margin-left: 125px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .intro_info1 .right_img {
     width: 100%;
-    padding-top: calc(1101 / 840 * 100%);
+    max-width: 830px;
+}
+
+.intro_info1 .right_img .img2 {
+    width: 100%;
+    padding-top: calc(1001 / 830 * 100%);
     background-image: url(../img/intro/intro2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+
 .intro_info2 {
     display: flex;
     max-height: 900px;
     overflow: hidden;
+    position: relative;
+    top: -50px;
 }
 
 .intro_info2 .left_wrap {
@@ -136,6 +180,11 @@
 }
 
 .intro_info2 .left_img {
+    width: 100%;
+    max-width: 960px;
+}
+
+.intro_info2 .left_img .img1 {
     width: 100%;
     position: relative;
     padding-top: calc(651 / 948 * 100%);
@@ -150,7 +199,6 @@
     flex: 1;
     width: 50%;
     padding-top: 50px;
-    padding-left: 125px;
     box-sizing: border-box;
 }
 
@@ -172,13 +220,16 @@
 
 .intro_info2 .right_txt {
     clear: both;
+    padding-left: 120px;
+    position: relative;
+    z-index: 1;
 }
 
 .intro_info2 .bgtxt {
-    color: #074c43;
+    color: rgba(7, 76, 67, 0.1);
     position: relative;
-    top: -210px;
-    left: -210px;
+    top: -205px;
+    left: -85px;
     z-index: 0;
 }
 
@@ -215,6 +266,7 @@
     width: 50%;
     position: relative;
 }
+
 .intro_info3 .right_wrap div {
     position: absolute;
     left: 50%;
@@ -227,7 +279,7 @@
 }
 
 .intro_info3 .bgtxt {
-    color: #f26a25;
+    color: rgba(242, 106, 37, 0.1);
 }
 
 .intro_info3 .img_wrap img {
@@ -267,7 +319,7 @@
     padding: 100px 0 0;
 }
 
-.intro_info4 .img_wrap > div {
+.intro_info4 .img_wrap>div {
     position: relative;
     width: 33.33%;
     margin: 0 10px;
@@ -275,15 +327,15 @@
     display: flex;
 }
 
-.intro_info4 .img_wrap > div:hover::before {
+.intro_info4 .img_wrap>div:hover::before {
     opacity: 1;
 }
 
-.intro_info4 .img_wrap > div:hover .hover_wrap {
+.intro_info4 .img_wrap>div:hover .hover_wrap {
     opacity: 1;
 }
 
-.intro_info4 .img_wrap > div::before {
+.intro_info4 .img_wrap>div::before {
     content: "";
     opacity: 0;
     position: absolute;
@@ -302,6 +354,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
     opacity: 0;
     text-align: center;
     -webkit-transition: 0.3s;
@@ -354,7 +408,15 @@
     width: 100%;
     max-width: 1280px;
     margin: auto;
-    margin-top: 135px;
+    padding-top: 135px;
+}
+
+.intro_bi1 .bi_title {
+    margin: auto;
+}
+
+.intro_bi .intro_bi1 .bi_title p {
+    letter-spacing: 1px;
 }
 
 .intro_bi .intro_bi1 .bi_title em {
@@ -371,7 +433,7 @@
     position: absolute;
     right: 0;
     top: 12px;
-    width: 84%;
+    width: 79%;
     height: 1px;
     background: #074c43;
 }
@@ -408,8 +470,12 @@
 }
 
 .identity .logo_img img {
+    width: 50%;
+    max-width: 610px;
     border: 1px solid #d7d7d7;
 }
+
+
 
 .identity .color_palette {
     margin-top: 50px;
@@ -509,6 +575,7 @@
     margin: 100px 0;
     margin-left: 30px;
 }
+
 .cercle_wrap li {
     display: inline-block;
     width: 354px;
@@ -528,11 +595,13 @@
     background-color: #074c43;
     z-index: 0;
 }
+
 .cercle_wrap li.ivory {
     background-color: rgba(255, 229, 173, 0.5);
     color: #555;
     z-index: 1;
 }
+
 .cercle_wrap li.orange {
     background-color: #f26a25;
     z-index: 0;
@@ -556,8 +625,100 @@
     background-color: #555;
 }
 
+/*--------------------media query width 1440px--------------------*/
+@media only screen and (max-width: 1440px) {
+
+    .intro h2 {
+        font-size: 36px;
+        letter-spacing: -3px;
+    }
+
+    .mainbnr_txt {
+        height: 255px;
+        padding-top: 40px;
+        box-sizing: border-box;
+    }
+}
+
+/*--------------------media query width 1280px--------------------*/
+@media only screen and (max-width: 1280px) {
+
+    .bi_title,
+    .identity,
+    .management {
+        width: calc(100% - 60px);
+        margin: auto;
+    }
+
+    .intro_bi .intro_bi1 .bi_title em::before {
+        width: 70%;
+    }
+
+    .identity .logo_img img:first-child {
+        margin-right: 10px;
+    }
+
+    .identity .logo_img img:last-child {
+        margin-left: 10px;
+    }
+}
+
 /*--------------------media query width 989px--------------------*/
 @media only screen and (max-width: 989px) {
+    .intro h2 {
+        font-size: 30px;
+    }
+
+    .intro h3 {
+        font-size: 80px;
+    }
+
+    .intro h4 {
+        font-size: 60px;
+        line-height: 1;
+    }
+
+    .intro h5 {
+        font-size: 36px;
+    }
+
+    .intro p {
+        font-size: 17px;
+    }
+
+    .intro .bgtxt {
+        font-size: 150px;
+    }
+
+
+    .intro_info4 .img_wrap {
+        width: calc(100% + 10px);
+        margin-left: -5px;
+    }
+
+    .intro_info4 .img_wrap>div {
+        margin: 0 5px;
+    }
+
+    .intro_info4 .img_wrap .img1,
+    .intro_info4 .img_wrap .img2,
+    .intro_info4 .img_wrap .img3 {
+        padding-top: 195px;
+    }
+
+
+    .intro_info4 p {
+        margin: 0.35em 0;
+    }
+
+    .intro_vid .vid_txt p {
+        margin: 0.35em 0;
+    }
+
+    .intro_bi .intro_bi1 .bi_title em::before {
+        width: 62%;
+    }
+
 }
 
 /*--------------------media query width 767px--------------------*/
@@ -582,8 +743,70 @@
     .intro .bgtxt {
         font-size: 150px;
     }
+
+    .mainbnr_txt {
+        padding-top: 60px;
+    }
+
+    .intro_info4 .img_wrap {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .intro_info4 .img_wrap>div {
+        width: 100%;
+    }
+
+    .bi_title {
+        width: 100%;
+    }
+
+    .intro_bi1 .bi_title {
+        background-color: #074c43;
+    }
+
+    .intro_bi .intro_bi1 .bi_title {
+        padding: 50px 20px 85px;
+        box-sizing: border-box;
+    }
+
+    .intro_bi .intro_bi1 .bi_title h3 {
+        color: #fff;
+    }
+
+    .intro_bi .intro_bi1 .bi_title em {
+        color: #fff;
+        text-align: center;
+    }
+
+    .intro_bi .intro_bi1 .bi_title em::before {
+        width: 0;
+        height: 0;
+    }
+
+    .intro_bi .intro_bi1 .bi_title span::before {
+        background-color: #fff;
+    }
+
+    .identity .logo_img {
+        flex-direction: column;
+    }
+
+    .identity .logo_img img {
+        width: 100%;
+    }
+
+    .identity .logo_img img:first-child {
+        margin-right: 0;
+    }
+
+    .identity .logo_img img:last-child {
+        margin-left: 60px;
+        margin-top: 20px;
+    }
+
+
 }
 
 /*--------------------media query width 767px--------------------*/
-@media only screen and (max-width: 480px) {
-}
+@media only screen and (max-width: 480px) {}
