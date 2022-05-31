@@ -153,6 +153,7 @@
 .intro_info1 .right_img {
     width: 100%;
     max-width: 830px;
+    margin-left: 15px;
 }
 
 .intro_info1 .right_img .img2 {
@@ -803,4 +804,17 @@
 
 /*--------------------media query width 767px--------------------*/
 @media only screen and (max-width: 480px) {
+    .bi_title,
+    .identity,
+    .management {
+        width: calc(100% - 40px);
+    }
+
+    .identity .logo_img img:first-child {
+        padding-right: 20px;
+    }
+
+    .identity .logo_img img:last-child {
+        padding-left: 20px;
+    }
 }
