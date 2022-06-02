@@ -67,6 +67,7 @@
     background-image: url(../img/intro/main_visual.png);
     background-size: cover;
     background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 .mainbnr_txt {

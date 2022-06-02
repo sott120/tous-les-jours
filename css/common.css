@@ -1,8 +1,8 @@
 /* 로컬폰트 생성 */
 @font-face {
     font-family: "point_type";
-    src: url(../fonts/CormorantGaramond-Bold.woff) format("woff");
     src: url(../fonts/CormorantGaramond-Bold.otf) format("opentype");
+    src: url(../fonts/CormorantGaramond-Bold.woff) format("woff");
 }
 @font-face {
     font-family: "sub_type";
@@ -39,7 +39,7 @@ img {
 }
 
 /* 원형 텍스트 애니메이션 */
-.circle{
+.circle {
     position: absolute;
     top: -243px;
     right: -71px;
@@ -47,20 +47,20 @@ img {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    opacity: .1;
+    opacity: 0.1;
     width: 404px;
     height: 404px;
-  }
+}
 
-.circle_animate{
+.circle_animate {
     animation: rotate_image 15s linear infinite;
     transform-origin: 50% 50%;
 }
-@keyframes rotate_image{
+@keyframes rotate_image {
     100% {
         transform: rotate(360deg);
     }
-    }
+}
 /*****************************헤더 시작*****************************/
 header {
     width: 100%;
@@ -420,7 +420,7 @@ footer {
         padding: 0 6px;
     }
 
-    .circle{
+    .circle {
         top: -153px;
         right: -45px;
         width: 252px;
@@ -511,7 +511,7 @@ footer {
         text-align: center;
     }
 
-    .circle{
+    .circle {
         display: none;
     }
 
