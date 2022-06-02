@@ -2,10 +2,12 @@
 @font-face {
     font-family: "point_type";
     src: url(../fonts/CormorantGaramond-Bold.woff) format("woff");
+    src: url(../fonts/CormorantGaramond-Bold.ttf) format("truetype");
 }
 @font-face {
     font-family: "sub_type";
     src: url(../fonts/BarlowSemiCondensed-Medium.woff) format("woff");
+    src: url(../fonts/BarlowSemiCondensed-Medium.ttf) format("truetype");
 }
 @font-face {
     font-family: "basic_type";
