@@ -39,14 +39,15 @@ img {
 }
 
 /* 원형 텍스트 애니메이션 */
-.main_circle{
+.circle{
     position: absolute;
     top: -243px;
     right: -71px;
-    background-image: url(../img/circletext_green_opacity10.png);
+    background-image: url(../img/circletext_green.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    opacity: .1;
     width: 404px;
     height: 404px;
   }
@@ -185,7 +186,8 @@ header {
 }
 
 .title_h2 {
-    font-family: point_type;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
     color: #074c43;
     text-align: center;
     font-size: 60px;
@@ -419,9 +421,9 @@ footer {
         padding: 0 6px;
     }
 
-    .main_circle{
+    .circle{
         top: -153px;
-        right: -71px;
+        right: -45px;
         width: 252px;
         height: 252px;
     }
@@ -510,7 +512,7 @@ footer {
         text-align: center;
     }
 
-    .main_circle{
+    .circle{
         display: none;
     }
 

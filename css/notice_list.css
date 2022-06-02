@@ -1,3 +1,8 @@
+.notice{
+    position: relative;
+    overflow: hidden;
+}
+
 .notice_wrap {
     width: 100%;
     max-width: 1280px;
