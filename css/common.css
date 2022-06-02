@@ -186,8 +186,7 @@ header {
 }
 
 .title_h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: bold;
+    font-family: point_type;
     color: #074c43;
     text-align: center;
     font-size: 60px;
