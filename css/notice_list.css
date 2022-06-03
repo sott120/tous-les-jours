@@ -24,6 +24,7 @@
 
 .notice_count span {
     color: #f26a25;
+    vertical-align: baseline;
 }
 
 .notice_search {
@@ -159,6 +160,68 @@
     font-weight: 100;
 }
 
+/* 리스트 페이지 네이션 */
+.notice_wrap .page {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.notice_wrap .page > li {
+    display: inline-block;
+    padding: 5px;
+    justify-content: center;
+}
+
+.notice_wrap .page > li > a {
+    display: block;
+    color: #777;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 100%;
+    text-align: center;
+}
+
+.notice_wrap .page > li > a:hover {
+    background: rgba(241, 241, 241, 0.8);
+    color: #074c43;
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.notice_wrap .page_active > a {
+    background: #f1f1f1;
+    position: relative;
+    color: #074c43 !important;
+}
+
+.notice_wrap .page_active > a::before {
+    border: 1px dotted #074c43;
+    content: '';
+    display: block !important;
+    position: absolute;
+    border-radius: 100%;
+    top: -7px;
+    left: -7px;
+    width: 57px;
+    height: 57px;
+}
+
+.notice_wrap .page .page_prev a:hover,
+.notice_wrap .page .page_next a:hover {
+    background: none;
+}
+
+.notice_wrap .page > li > a img {
+    vertical-align: baseline;
+}
+
 /*--------------------media query width 1280px--------------------*/
 @media only screen and (max-width: 1280px) {
     .notice_wrap {
@@ -276,4 +339,27 @@
 
 /*--------------------media query width6 480px--------------------*/
 @media only screen and (max-width: 480px) {
+    .notice_wrap .page > li > a {
+        display: block;
+        color: #777;
+        font-size: 15px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .notice_wrap .page_active > a::before {
+        border: 1px dotted #074c43;
+        content: '';
+        display: block !important;
+        position: absolute;
+        border-radius: 100%;
+        top: -7px;
+        left: -7px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .notice_wrap .page_active > a {
+    }
 }
