@@ -170,7 +170,7 @@
 
 .intro_info2 {
     display: flex;
-    max-height: 900px;
+    max-height: 1200px;
     overflow-x: clip;
     position: relative;
     top: -50px;
@@ -991,8 +991,8 @@
     }
 
     .intro_info2 {
-        max-height: none;
         top: auto;
+        max-height: none;
     }
 
     .intro_info2 .left_wrap {
