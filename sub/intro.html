@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;700&
   family=Cormorant+Garamond:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -185,6 +186,9 @@
                             새로워진 뚜레쥬르를 나타내는 엠블럼은 매일매일"새로운 반죽을 밀어 신선한 맛과 향을 퍼뜨린다"는<br />
                             의미로 신선한 반죽을 밀대로 미는 모습을 표현하였습니다.
                         </p>
+                        <div class="rotate_circle">
+                            <img src="../img/intro/circle-img.png" alt="">
+                        </div>
                     </div>
                     <div class="logo_img">
                         <img src="../img/intro/identity_logo1.jpg" alt="로고이미지" />
@@ -260,7 +264,7 @@
         </section>
         <section class="intro_history">
             <h4>Our History</h4>
-            <article class="mySwiper his_wrap">
+            <article class="his_swiper his_wrap">
                 <div class="his_slide swiper-wrapper">
                     <figure class="swiper-slide">
                         <img src="../img/intro/1n.png" alt="">
@@ -391,39 +395,11 @@
         </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 4,
-            spaceBetween: 30,
-            // centeredSlides: true,
-            pagination: {
-                el: ".swiper-pagination",
-                type: "progressbar",
-            },
-            navigation: {
-                nextEl: ".his_nav_next",
-                prevEl: ".his_nav_prev",
-            },
-            breakpoints: {
-                1280: {
-                    slidesPerView: 4,
-                    spaceBetween: 30
-                },
-                989: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                },
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10
-                }
-            }
-        });
+        AOS.init();
     </script>
+    <script src="../js/sy_script.js"></script>
 </body>
 
 </html>
