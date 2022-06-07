@@ -43,6 +43,10 @@
     float: left;
 }
 
+.signup_box .left.clear {
+    margin-right: 10px;
+}
+
 .signup_box label {
     position: absolute;
     left: -9999px;
@@ -70,12 +74,51 @@
 input[type='radio'],
 input[type='radio']:checked {
     appearance: none;
+    position: relative;
     display: block;
     width: 60px;
     height: 47px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 0;
+}
+
+.signup_box .left .radio.radio_left {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0;
+}
+
+.signup_box .left .radio.radio_left::after {
+    content: '남';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-family: basic_type;
+    color: #333;
+}
+
+.signup_box .left .radio.radio_right {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    margin: 0 -4px;
+}
+
+.signup_box .left .radio.radio_right::after {
+    content: '여';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-family: basic_type;
+    color: #333;
+}
+
+.signup_box .radio:hover::after {
+    text-decoration: underline;
 }
 
 .signup_box strong {
@@ -94,7 +137,6 @@ input[type='radio']:checked {
 .signup_box .user_nm {
     width: 100%;
     float: left;
-    margin-right: 10px;
 }
 
 .signup_box .select_birth_box {
@@ -166,6 +208,30 @@ input[type='radio']:checked {
     .signup_box input[type='text'] {
         padding: 10px;
     }
+
+    input[type='radio'],
+    input[type='radio']:checked {
+        width: 40px;
+        height: 37px;
+    }
+
+    .signup_box .left .radio.radio_left {
+    }
+
+    .signup_box .left .radio.radio_left::after {
+        font-size: 14px;
+    }
+
+    .signup_box .left .radio.radio_right {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin: 0 -4px;
+    }
+
+    .signup_box .left .radio.radio_right::after {
+        font-size: 14px;
+    }
+
     .signup_box select {
         padding: 10px 15px;
     }
