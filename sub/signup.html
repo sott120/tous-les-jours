@@ -112,10 +112,10 @@
                         </div>
                     </div>
                     <div class="signup_box clear">
-                        <strong>생년월일<span>(필수)</span></strong>
+                        <strong>생년월일<span>(선택)</span></strong>
                         <div class="select_birth_box year">
                             <label for="birthYear" class="hid">년도</label>
-                            <select id="birthYear" name="birth_year" required="required">
+                            <select id="birthYear" name="birth_year">
                                 <option value="">선택</option>
                                 <option value="2008">2008년</option>
                                 <option value="2007">2007년</option>
@@ -200,7 +200,7 @@
                         </div>
                         <div class="select_birth_box month">
                             <label for="birthMnth" class="hid">월</label>
-                            <select id="birthMnth" name="birth_month" required="required">
+                            <select id="birthMnth" name="birth_month">
                                 <option value="">선택</option>
                                 <option value="01">1월</option>
                                 <option value="02">2월</option>
@@ -218,7 +218,7 @@
                         </div>
                         <div class="select_birth_box day">
                             <label for="birthDay" class="hid">일</label>
-                            <select id="birthDay" name="birth_day" required="required">
+                            <select id="birthDay" name="birth_day">
                                 <option value="">선택</option>
                                 <option value="01">1일</option>
                                 <option value="02">2일</option>
@@ -255,7 +255,7 @@
                         </div>
                     </div>
                     <div class="signup_box">
-                        <strong>휴대폰<span>(필수 / 숫자만)</span></strong>
+                        <strong>휴대폰<span>(선택, 숫자만 입력)</span></strong>
                         <div>
                             <label for="phone" class="hid">휴대폰</label>
                             <input type="text" class="phone" name="phone" id="phone" placeholder="ex) 01012345678" maxlength="11" />
@@ -269,7 +269,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="signup_wrap sign_btn bd_none">가입하기</section>
+                <button class="signup_wrap sign_btn bd_none">가입하기</button>
             </form>
         </main>
         <footer>

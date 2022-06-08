@@ -1,0 +1,42 @@
+/*animation variations*/
+
+.avia_transform .avia_animated_image,
+.avia_transform.avia_desktop .av-animated-generic {
+    opacity: 0;
+}
+
+.avia_transform .avia_start_delayed_animation.fade-in {
+    /*-webkit-animation: avia-fadein 1.5s 1 ease-out;  Safari 4+ */
+    /*animation:         avia-fadein 1.5s 1 ease-out;  IE 10+ */
+    opacity: 1;
+}
+
+.avia_transform .avia_start_delayed_animation.pop-up {
+    -webkit-animation: avia_image_appear 0.5s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Safari 4+ */
+    animation: avia_image_appear 0.5s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* IE 10+ */
+    opacity: 1;
+}
+
+.avia_transform .avia_start_delayed_animation.top-to-bottom {
+    -webkit-animation: avia-ttb 0.8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Safari 4+ */
+    animation: avia-ttb 0.8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* IE 10+ */
+    opacity: 1;
+}
+
+.avia_transform .avia_start_delayed_animation.bottom-to-top {
+    -webkit-animation: avia-btt 0.8s 1 cubic-bezier(0.165, 0.84, 0.44, 1); /* Safari 4+ */
+    animation: avia-btt 0.8s 1 cubic-bezier(0.165, 0.84, 0.44, 1); /* IE 10+ */
+    opacity: 1;
+}
+
+.avia_transform .avia_start_delayed_animation.left-to-right {
+    -webkit-animation: avia-ltr 0.8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Safari 4+ */
+    animation: avia-ltr 0.8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* IE 10+ */
+    opacity: 1;
+}
+
+.avia_transform .avia_start_delayed_animation.right-to-left {
+    -webkit-animation: avia-rtl 0.8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Safari 4+ */
+    animation: avia-rtl 0.8s 1 cubic-bezier(0.175, 0.885, 0.32, 1.275); /* IE 10+ */
+    opacity: 1;
+}

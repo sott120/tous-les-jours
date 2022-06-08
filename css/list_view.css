@@ -155,12 +155,11 @@
 
     .list_view_title em {
         font-size: 16px;
-        
     }
 
     .list_view_title p {
-    vertical-align: bottom;
-}
+        vertical-align: bottom;
+    }
 
     .list_view_title .date_period {
         font-size: 16px;
@@ -172,6 +171,14 @@
 
     .list_view_title .date_value {
         font-size: 14px;
+    }
+
+    .list_view_contents {
+        text-align: left;
+    }
+
+    .list_view_contents h4 {
+        font-size: 18px;
     }
 
     .list_view_btn a {
@@ -189,4 +196,5 @@
 }
 
 /*--------------------media query width6 480px--------------------*/
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+}
