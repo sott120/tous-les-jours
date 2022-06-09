@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/intro.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;700&
@@ -102,17 +103,17 @@
                 </div>
             </article>
             <article class="intro_info2">
-                <div class="left_wrap">
+                <div class="left_wrap  int_transition int_transition_right">
                     <div class="left_img">
-                        <div class="img1" data-aos="fade-right" data-aos-duration="700" data-aos-once="true"></div>
+                        <div class="img1 "></div>
                         <div class="w70">
                             <div class="img2 int_none"></div>
                         </div>
                     </div>
                 </div>
-                <div class="right_wrap">
+                <div class="right_wrap int_transition int_transition_up">
                     <img class="deco_img int_none" src="../img/intro/intro_bg1.png" alt="" />
-                    <div class="right_txt" data-aos="fade-up" data-aos-duration="700" data-aos-once="true">
+                    <div class="right_txt" >
                         <h2><b>갓 구운 신선함</b>이<br />매장을 가득 채웁니다.</h2>
                         <p>
                             오븐에서 방금 꺼낸 빵이 가장 맛있다는 것을 알기에,<br />
@@ -133,7 +134,7 @@
             </article>
             <article class="intro_info3">
                 <div class="left_wrap">
-                    <h2>좋은 밀가루를 만드는 회사의<br /><b>베이커리 브랜드</b></h2>
+                    <h2 class=" int_transition int_transition_up">좋은 밀가루를 만드는 회사의<br /><b>베이커리 브랜드</b></h2>
                 </div>
                 <div class="right_wrap">
                     <div class="bgtxt">Bakery</div>
@@ -193,10 +194,10 @@
                         </div>
                     </div>
                     <div class="logo_img">
-                        <img src="../img/intro/identity_logo1.jpg" alt="로고이미지" />
-                        <img src="../img/intro/identity_logo2.jpg" alt="로고이미지" />
+                        <img class="int_transition int_transition_up" src="../img/intro/identity_logo1.jpg" alt="로고이미지" />
+                        <img class="int_transition int_transition_up" style="transition-delay: 0.2s" src="../img/intro/identity_logo2.jpg" alt="로고이미지" />
                     </div>
-                    <div class="color_palette">
+                    <div class="color_palette int_transition int_transition_up">
                         <h5>Core Color Palette</h5>
                         <div class="palette_wrap">
                             <div class="palette_box">
@@ -244,7 +245,7 @@
                 </div>
             </article>
             <article class="management">
-                <h4>Management Philosophy</h4>
+                <h4 class="int_transition int_transition_fadein">Management Philosophy</h4>
                 <ul class="cercle_wrap">
                     <li class="green">
                         <img src="../img/intro/philo-img03.png" alt="" />
@@ -266,7 +267,7 @@
         </section>
         <section class="intro_history">
             <h4>Our History</h4>
-            <article class="his_swiper his_wrap">
+            <article class="his_swiper his_wrap int_transition int_transition_up">
                 <div class="his_slide swiper-wrapper">
                     <figure class="swiper-slide">
                         <img src="../img/intro/1n.png" alt="">
@@ -397,10 +398,6 @@
         </div>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
     <script src="../js/sy_script.js"></script>
 </body>
 

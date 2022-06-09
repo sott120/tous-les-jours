@@ -616,7 +616,6 @@
     width: 100%;
     text-align: center;
     margin: 100px 0;
-    margin-left: 15px;
 }
 
 .cercle_wrap li {
@@ -796,6 +795,10 @@
 
     .identity .logo_img img:last-child {
         padding-left: 10px;
+    }
+
+    .cercle_wrap {
+        margin-left: 15px;
     }
 
     .cercle_wrap li {
@@ -1105,6 +1108,14 @@
         width: 80%;
     }
 
+    .intro_info3 .img_wrap img {
+        width: 100%;
+    }
+
+    .intro_info3 .img_wrap .baked {
+        opacity: 1;
+    }
+
     .intro_info4 .img_wrap {
         width: 100%;
         flex-direction: column;
@@ -1114,12 +1125,17 @@
         width: 100%;
     }
 
-    .intro_info3 .img_wrap img {
-        width: 100%;
+    .intro_info4 .img_wrap > div::before {
+        opacity: 0.3;
     }
 
-    .intro_info3 .img_wrap .baked {
+    .intro_info4 .hover_wrap {
         opacity: 1;
+        text-shadow: 1px 1px 6px rgb(0 0 0 / 70%);
+    }
+
+    .intro_info4 .img_wrap > div:hover::before {
+        opacity: 0.3;
     }
 
     .bi_title {
