@@ -37,3 +37,7 @@
     opacity: 1;
     transform: none;
 }
+
+.int_transition.off {
+    transform: translate(0, 0);
+}

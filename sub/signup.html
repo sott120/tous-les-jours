@@ -18,6 +18,7 @@
   family=Cormorant+Garamond:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     </head>
 
     <body>
@@ -84,14 +85,17 @@
                     <div class="signup_box">
                         <label for="userId" class="hid">아이디</label>
                         <input type="text" class="user_id" name="user_id" id="userId" placeholder="아이디" maxlength="13" />
+                        <p class="input_warn_txt"></p>
                     </div>
                     <div class="signup_box">
                         <label for="userPw" class="hid">비밀번호</label>
-                        <input type="text" class="user_pw" name="user_pw" id="userPw" placeholder="비밀번호" maxlength="20" />
+                        <input type="password" class="user_pw" name="user_pw" id="userPw" placeholder="비밀번호" maxlength="20" />
+                        <p class="input_warn_txt"></p>
                     </div>
                     <div class="signup_box bd_none">
                         <label for="userPwChk" class="hid">비밀번호 확인</label>
-                        <input type="text" class="user_pw_chk" name="user_pw_chk" id="userPwChk" placeholder="비밀번호 확인" maxlength="20" />
+                        <input type="password" class="user_pw_chk" name="user_pw_chk" id="userPwChk" placeholder="비밀번호 확인" maxlength="20" />
+                        <p class="input_warn_txt"></p>
                     </div>
                 </section>
                 <section class="signup_wrap">
@@ -100,6 +104,7 @@
                         <div class="left clear">
                             <label for="userNm" class="hid">이름</label>
                             <input type="text" class="user_nm" name="user_nm" id="userNm" placeholder="이름을 입력하세요." maxlength="10" />
+                            <p class="input_warn_txt"></p>
                         </div>
                         <div class="left">
                             <label for="userGender" class="hid">성별</label>
@@ -259,6 +264,7 @@
                         <div>
                             <label for="phone" class="hid">휴대폰</label>
                             <input type="text" class="phone" name="phone" id="phone" placeholder="ex) 01012345678" maxlength="11" />
+                            <p class="input_warn_txt"></p>
                         </div>
                     </div>
                     <div class="signup_box bd_none">
@@ -266,6 +272,7 @@
                         <div>
                             <label for="email" class="hid">이메일</label>
                             <input type="text" class="email" name="email" id="email" placeholder="E-mail을 입력하세요." />
+                            <p class="input_warn_txt"></p>
                         </div>
                     </div>
                 </section>
@@ -322,5 +329,7 @@
                 <p>COPYRIGHT 2022©CJ Foodville ALL RIGHT RESERVED.</p>
             </div>
         </footer>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="../js/sy_script.js"></script>
     </body>
 </html>
