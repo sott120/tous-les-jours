@@ -76,7 +76,7 @@
             <section class="title">
                 <h2 class="title_h2">Sign up</h2>
             </section>
-            <form>
+            <form id="signup">
                 <section class="signup_wrap">
                     <div class="signup_deco">
                         <img src="../img/circle_logo.png" alt="" />
@@ -89,12 +89,12 @@
                     </div>
                     <div class="signup_box">
                         <label for="userPw" class="hid">비밀번호</label>
-                        <input type="password" class="user_pw" name="user_pw" id="userPw" placeholder="비밀번호" maxlength="20" />
+                        <input type="password" class="user_pw" name="user_pw" id="userPw" placeholder="비밀번호" maxlength="16" />
                         <p class="input_warn_txt"></p>
                     </div>
                     <div class="signup_box bd_none">
                         <label for="userPwChk" class="hid">비밀번호 확인</label>
-                        <input type="password" class="user_pw_chk" name="user_pw_chk" id="userPwChk" placeholder="비밀번호 확인" maxlength="20" />
+                        <input type="password" class="user_pw_chk" name="user_pw_chk" id="userPwChk" placeholder="비밀번호 확인" maxlength="16" />
                         <p class="input_warn_txt"></p>
                     </div>
                 </section>
@@ -276,8 +276,9 @@
                         </div>
                     </div>
                 </section>
-                <button class="signup_wrap sign_btn bd_none">가입하기</button>
             </form>
+            <button onclick="signup()" class="signup_wrap sign_btn bd_none">가입하기</button>
+
         </main>
         <footer>
             <div class="f_top_wrap">
@@ -330,6 +331,7 @@
             </div>
         </footer>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="../js/sy_script.js"></script>
+        <script src="../js/intro.js"></script>
+        <script src="../js/signup.js"></script>
     </body>
 </html>

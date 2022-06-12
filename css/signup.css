@@ -15,6 +15,7 @@
     margin: 0 auto 30px;
 }
 
+
 .signup_wrap .signup_deco {
     text-align: center;
 }
@@ -72,9 +73,7 @@
     display: inline-flex;
     align-items: center;
 }
-
-input[type='radio'],
-input[type='radio']:checked {
+input[type='radio'] {
     appearance: none;
     position: relative;
     display: block;
@@ -83,6 +82,19 @@ input[type='radio']:checked {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 0;
+}
+
+input[type='radio']:checked {
+    appearance: none;
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 47px;
+    background-color: #F4F4F2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0;
+    color: #333;
 }
 
 .signup_box .left .radio.radio_left {
@@ -117,6 +129,11 @@ input[type='radio']:checked {
     font-size: 17px;
     font-family: basic_type;
     color: #777;
+}
+
+.signup_box .left .radio[type='radio']:checked::after{
+    color: #333 ;
+    font-family: basic_med;
 }
 
 .signup_box .radio:hover::after {
@@ -236,9 +253,6 @@ input[type='radio']:checked {
     input[type='radio']:checked {
         width: 40px;
         height: 37px;
-    }
-
-    .signup_box .left .radio.radio_left {
     }
 
     .signup_box .left .radio.radio_left::after {
