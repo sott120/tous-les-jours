@@ -15,7 +15,6 @@
     margin: 0 auto 30px;
 }
 
-
 .signup_wrap .signup_deco {
     text-align: center;
 }
@@ -82,6 +81,7 @@ input[type='radio'] {
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 0;
+    cursor: pointer;
 }
 
 input[type='radio']:checked {
@@ -90,7 +90,7 @@ input[type='radio']:checked {
     display: block;
     width: 60px;
     height: 47px;
-    background-color: #F4F4F2;
+    background-color: #f4f4f2;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 0;
@@ -131,8 +131,8 @@ input[type='radio']:checked {
     color: #777;
 }
 
-.signup_box .left .radio[type='radio']:checked::after{
-    color: #333 ;
+.signup_box .left .radio[type='radio']:checked::after {
+    color: #333;
     font-family: basic_med;
 }
 
@@ -195,6 +195,7 @@ input[type='radio']:checked {
     background-color: #074c43;
     margin: auto;
     margin-bottom: 100px;
+    cursor: pointer;
 }
 
 /* pass, warnning effect */

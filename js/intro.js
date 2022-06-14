@@ -32,8 +32,7 @@ let swiper = new Swiper('.his_swiper', {
     },
 });
 
-//인트로 페이지 스크롤시 애니메이션 실행
-
+//인트로 페이지 스크롤시 fade in 애니메이션 실행
 const transList = document.querySelectorAll('.int_transition');
 
 const animation = function () {
@@ -53,51 +52,73 @@ const animation = function () {
 };
 
 window.addEventListener('scroll', animation);
+window.addEventListener('load', animation);
 
-// 클릭시 페이지 스크롤링
-// document.querySelector('.scrollnav_wrap').addEventListener('click', (e) => {
-//     console.log('클릭');
-//     if (e.target.nodeName === 'LI') {
-//         let id_value = e.target.dataset.link;
-//         console.log(id_value);
-//         document.querySelector(id_value).scrollIntoView({ behavior: 'smooth' });
-//     }
-// });
+// 페이지 스크롤링
+const scrollList = document.querySelectorAll('.scrollnav_circle');
+const scrollTxt = document.querySelectorAll('.scrollnav_txt');
+const boxArr = document.querySelectorAll('.intro_box');
 
-// if (window.scrollY > 500) {
-//     //스크롤 위치 500 높을시
-//     //상단 이동 버튼 생성(토마토색)
-//     document.querySelector('.arrow-up').classList.add('visible');
-//     //하단 이동 버튼 삭제(초록색)
-//     document.querySelector('.arrow-down').classList.remove('visible');
-// } else {
-//     //스크롤 위치 500 아래일시
-//     //상단 이동 버튼 삭제(토마토색)
-//     document.querySelector('.arrow-up').classList.remove('visible');
-//     //하단 이동 버튼 생성(초록색)
-//     document.querySelector('.arrow-down').classList.add('visible');
-// }
+function appear(i) {
+    scrollList[i].style.backgroundColor = '#c5c5c5';
+    scrollTxt[i].style.opacity = '1';
+}
 
-// //오렌지색 버튼 클릭시, 최상단 태그로 이동
-// document.querySelector('.arrow-up').addEventListener('click', (e) => {
-//     document.querySelector('.container').scrollIntoView({
-//         behavior: 'smooth',
-//     });
-// });
-// //초록색 버튼 클릭시, 최하단 태그로 이동
-// document.querySelector('.arrow-down').addEventListener('click', (e) => {
-//     document.querySelector('.container2').scrollIntoView({
-//         behavior: 'smooth',
-//     });
-// });
+function disappear(i) {
+    scrollList[i].style.backgroundColor = 'transparent';
+    scrollTxt[i].style.opacity = '0';
+}
 
-let scrollList = document.querySelectorAll('.scrollnav_circle');
+//nav 클릭시 스크롤
+for (let i = 0; i < scrollList.length; i++) {
+    scrollList[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        boxArr[i].scrollIntoView({ behavior: 'smooth' });
+    });
+} //css에 scroll-marign 속성을 이용해서 높이를 수정해줬다.
+
+//스크롤시 버튼 변화
+var boxTop1 = boxArr[0].getBoundingClientRect().top;
+var boxTop2 = boxArr[1].getBoundingClientRect().top;
+var boxTop3 = boxArr[2].getBoundingClientRect().top;
+var absoluteTop1 = window.pageYOffset + boxTop1;
+var absoluteTop2 = window.pageYOffset + boxTop2;
+var absoluteTop3 = window.pageYOffset + boxTop3;
+//intro_box들의 고정 위치 구하는 변수
+
+console.log('박스위치')
+console.log(boxTop2)
+console.log('스크롤위치')
+console.log(window.pageYOffset)
+console.log('상대경로')
+console.log(absoluteTop2)
 
 function navChange() {
-    console.log(window.scrollY);
-    if (window.scrollY > 700) {
-        scrollList[0].style.backgroundColor = '#999';
+    
+    if (window.pageYOffset + 120 >= absoluteTop1 && window.pageYOffset + 600 < absoluteTop2 ) {
+        disappear(1);
+        disappear(2);
+        appear(0);
+    }
+    if (window.pageYOffset + 600 >= absoluteTop2  && window.pageYOffset + 1000 < absoluteTop3 ) {
+        disappear(0);
+        disappear(2);
+        appear(1);
+    }
+    if (window.pageYOffset + 1000 >= absoluteTop3 ) {
+        disappear(0);
+        disappear(1);
+        appear(2);
+    }
+    if (window.pageYOffset + 120 < absoluteTop1 ) {
+        disappear(0);
+        disappear(1);
+        disappear(2);
+        scrollTxt[0].style.opacity = '1';
+        scrollTxt[1].style.opacity = '1';
+        scrollTxt[2].style.opacity = '1';
     }
 }
 
 window.addEventListener('scroll', navChange);
+window.addEventListener('load', navChange);

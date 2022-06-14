@@ -98,6 +98,7 @@
     width: 100%;
     background-color: #fff;
     padding: 100px 0 0;
+    scroll-margin: 100px;
 }
 
 .intro_info_wrap::after {
@@ -422,6 +423,9 @@
 }
 
 /* BI, identity시작 */
+.intro_bi {
+    scroll-margin: 200px;
+}
 
 .intro_bi1 {
     position: relative;
@@ -678,7 +682,7 @@
     padding: 100px 0 0;
     padding-left: 200px;
     box-sizing: border-box;
-    overflow: hidden;
+    scroll-margin: 100px;
 }
 
 .intro_history h4 {
@@ -754,10 +758,8 @@
 
 .intro .scrollnav li {
     font-family: basic_light;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #999;
-    text-shadow: 0 0 1px rgb(0 0 0 / 45%);
+    padding: 5px 0;
+    transition: all 0.2s ease-in-out;
 }
 
 .intro .scrollnav .scrollnav_circle {
@@ -766,14 +768,19 @@
     z-index: 1;
     height: 11px;
     width: 11px;
-    border: 1px solid #999;
-    box-shadow: 0 0 1px rgb(0 0 0 / 45%);
+    border: 1px solid #c5c5c5;
     transform: translateY(40%);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .intro .scrollnav .scrollnav_txt {
+    letter-spacing: 1;
     padding-left: 20px;
-    font-size: 0;
+    font-size: 14px;
+    color: #c5c5c5;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
 }
 
 /*--------------------media query width 1440px--------------------*/
@@ -984,6 +991,10 @@
     }
 
     .intro_history > img {
+        display: none;
+    }
+
+    .intro .scrollnav {
         display: none;
     }
 }
