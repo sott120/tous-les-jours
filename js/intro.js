@@ -86,13 +86,6 @@ var absoluteTop2 = window.pageYOffset + boxTop2;
 var absoluteTop3 = window.pageYOffset + boxTop3;
 //intro_box들의 고정 위치 구하는 변수
 
-console.log('박스위치')
-console.log(boxTop2)
-console.log('스크롤위치')
-console.log(window.pageYOffset)
-console.log('상대경로')
-console.log(absoluteTop2)
-
 function navChange() {
     
     if (window.pageYOffset + 120 >= absoluteTop1 && window.pageYOffset + 600 < absoluteTop2 ) {

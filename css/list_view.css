@@ -93,6 +93,35 @@
     font-size: 14px;
 }
 
+.list_view_edit{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.list_view_edit .graybtn{
+    display: block;
+    width: 80px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    color: #777;
+    border: none;
+    border-radius: 30px;
+    box-sizing: content-box;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.list_view_edit .graybtn:hover{
+    background-color: #074c43;
+    color: #fff;
+}
+
 .list_view_btn a {
     font-family: sub_type;
     display: block;
@@ -180,6 +209,15 @@
     .list_view_contents h4 {
         font-size: 18px;
     }
+    
+    .list_view_edit .graybtn{
+        display: block;
+        width: 15%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 13px;
+        min-width: 60px;
+    }
 
     .list_view_btn a {
         font-family: sub_type;
@@ -190,8 +228,8 @@
         height: 40px;
         line-height: 40px;
         border-radius: 50px;
-        font-size: 11px;
-        background: #f26a25 url(../img/gt-btnbg.png) no-repeat 77% center;
+        font-size: 12px;
+        background: #f26a25 url(../img/gt-btnbg.png) no-repeat 80% center;
     }
 }
 
