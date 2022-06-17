@@ -3,7 +3,7 @@
     scroll-behavior: smooth;
 }
 .intro h2 {
-    font-family: basic_light;
+    font-weight: 300;
     font-size: 53px;
     letter-spacing: -5px;
     color: #000;
@@ -83,7 +83,7 @@
 }
 
 .mainbnr_txt h2 {
-    font-family: basic_med;
+    font-weight: 500;
     color: #fff;
 }
 
@@ -385,12 +385,12 @@
 }
 
 .intro_info4 p {
-    font-family: basic_light;
+    font-weight: 300;
     color: #fff;
 }
 
 .intro_info4 span {
-    font-family: basic_med;
+    font-weight: 500;
     color: #fff;
     font-size: 21px;
 }
@@ -757,7 +757,7 @@
 }
 
 .intro .scrollnav li {
-    font-family: basic_light;
+    font-weight: 300;
     padding: 5px 0;
     transition: all 0.2s ease-in-out;
 }

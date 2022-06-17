@@ -37,7 +37,7 @@
 }
 
 .list_view_title .date_period {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: sub_type;
     font-weight: 100;
     font-size: 21px;
     line-height: 1.3;
@@ -50,7 +50,7 @@
 }
 
 .list_view_title .date_value {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: sub_type;
     font-weight: 100;
     font-size: 21px;
     line-height: 1.3;

@@ -133,7 +133,7 @@ input[type='radio']:checked {
 
 .signup_box .left .radio[type='radio']:checked::after {
     color: #333;
-    font-family: basic_med;
+    font-weight: 500;
 }
 
 .signup_box .radio:hover::after {
@@ -141,7 +141,7 @@ input[type='radio']:checked {
 }
 
 .signup_box strong {
-    font-family: basic_med;
+    font-weight: 500;
     color: #1c1c1c;
     display: block;
     font-size: 17px;
@@ -188,7 +188,7 @@ input[type='radio']:checked {
     display: block;
     color: #fff;
     width: 100%;
-    font-family: basic_med;
+    font-weight: 500;
     font-size: 22px;
     text-align: center;
     padding: 16px 0;

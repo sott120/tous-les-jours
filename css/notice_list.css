@@ -134,7 +134,7 @@
 }
 
 .notice_list_noti td a {
-    font-family: basic_med;
+    font-weight: 500;
     color: #000 !important;
 }
 
@@ -156,7 +156,7 @@
 
 .notice_list .notice_list_num,
 .notice_list .notice_list_date {
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: sub_type;
     font-weight: 100;
 }
 
