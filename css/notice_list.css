@@ -160,12 +160,13 @@
     font-weight: 100;
 }
 
-.notice a.graybtn{
+.notice .graybtn{
     display: block;
-    width: 120px;
+    width: 80px;
     height: 40px;
     line-height: 40px;
     font-size: 15px;
+    float: right;
     color: #777;
     border: none;
     border-radius: 30px;
@@ -176,20 +177,21 @@
     transition-duration: 0.3s;
     text-align: center;
     margin-top: 20px;
-    float: right;
+    margin-left: 5px;
 }
 
-.notice a.graybtn:hover{
+.notice .graybtn:hover{
     background-color: #f26a25;
     color: #fff;
 }
 
+
 /* 리스트 페이지 네이션 */
 .notice_wrap .page {
-    padding: 60px 0 100px 0;
+    clear: both;
+    padding: 40px 0 100px 0;
     display: flex;
     justify-content: center;
-    clear: both;
 }
 
 .notice_wrap .page > li {
@@ -361,21 +363,19 @@
         font-size: 14px;
     }
 
-    .notice a.graybtn{
+    .notice .graybtn{
         display: block;
-        width: 20%;
+        width: 15%;
         height: 35px;
         line-height: 35px;
         font-size: 13px;
-        min-width: 80px;
+        min-width: 60px;
     }
 
     .notice_wrap .page {
-        padding: 30px 0 70px 0;
-        display: flex;
-        justify-content: center;
-        clear: both;
+        padding: 20px 0 70px 0;
     }
+
 }
 
 /*--------------------media query width6 480px--------------------*/
@@ -401,6 +401,4 @@
         height: 42px;
     }
 
-    .notice_wrap .page_active > a {
-    }
 }
