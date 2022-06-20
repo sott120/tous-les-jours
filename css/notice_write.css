@@ -14,7 +14,7 @@
     font-size: 17px;
 }
 
-.form_wrap form{
+.form_wrap .inner_form{
     max-width: 1280px;
     width: 100%;
     padding: 0 50px;
@@ -52,6 +52,9 @@
     flex-direction: column;
 }
 
+.form_wrap label{
+    padding-bottom: 20px;
+}
 .form_wrap span{
     padding-bottom: 20px;
 }
@@ -62,6 +65,8 @@
     width: 100%;
     height: 42px;
     line-height: 42px;
+    font-family: basic_type;
+    font-size: 17px;
     box-sizing: content-box;
     letter-spacing: -1px;
     color: #1C1C1C;
@@ -76,6 +81,10 @@
     outline : 1px solid #e0e0e0
 }
 
+.form_wrap .title_t{
+    width: 100%;
+}
+
 .form_wrap .content{
     margin-bottom: 30px;
 }
@@ -83,6 +92,7 @@
 .form_wrap .content textarea{
     resize: none;
     width: 100%;
+    height: 500px;
     line-height: 26px;
     font-family: inherit;
     font-size: inherit;
@@ -196,7 +206,7 @@
         font-size: 15px;
     }
 
-    .form_wrap form{
+    .form_wrap .inner_form{
         padding: 0 30px;
 
     }
@@ -214,19 +224,26 @@
         line-height: 20px;
     }
     
+    .form_wrap label{
+        font-size: 15px;
+        padding-bottom: 5px;
+    }
+
     .form_wrap span{
         font-size: 15px;
         padding-bottom: 5px;
     }
     
-
-
     .form_wrap input[type='text'],
     .form_wrap input[type='select'],
     .form_wrap input[type='password']{
         font-size: 15px;
         height: 35px;
         line-height: 35px;
+    }
+
+    .form_wrap .content textarea{
+        height: 300px;
     }
 
     .form_wrap .upload_name{

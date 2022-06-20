@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/common.css" />
     <link rel="stylesheet" href="../css/notice_write.css" />
 </head>
+
 <body>
     <header>
         <section class="h_container">
@@ -69,43 +70,44 @@
                 <li><a href="">고객센터</a></li>
             </ul>
         </section>
-        <section class="form_wrap">
-            <form method="GET" id="noti_write_form" action="">
-                <article class="title_wrap">
-                    <div class="select">
-                        <span>분류</span>
-                        <select name="" id="">
-                            <option value="0">일반공지</option>
-                            <option value="1">전체공지</option>
-                        </select>
-                    </div>
-                    <div class="title_t">
-                        <span>제목</span>
-                        <input type="text">
-                    </div>
-                </article>
-                <div class="content">
-                    <span>내용</span>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div class="file">
-                    <span>첨부파일</span>
-                    <article>
-                        <input class="upload_name" value="첨부파일" placeholder="첨부파일">
-                        <label for="file">파일첨부</label>
-                        <input type="file" id="file">
+        <form>
+            <div class="form_wrap">
+                <div class="inner_form">
+                    <article class="title_wrap">
+                        <div class="select">
+                            <label for="select">분류</label>
+                            <select name="select" id="select">
+                                <option value="0">일반공지</option>
+                                <option value="1">전체공지</option>
+                            </select>
+                        </div>
+                        <div class="title_t">
+                            <label for="title">제목</label>
+                            <input type="text" id="title" name="title">
+                        </div>
                     </article>
+                    <div class="content">
+                        <label for="content">내용</label>
+                        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="file">
+                        <span>첨부파일</span>
+                        <article>
+                            <input class="upload_name" value="첨부파일" placeholder="첨부파일">
+                            <label for="file">파일첨부</label>
+                            <input type="file" id="file">
+                        </article>
+                    </div>
+                    <div class="password">
+                        <label for="password">비밀번호</label>
+                        <input type="password" id="password" name="password">
+                    </div>
                 </div>
-                <div class="password">
-                    <span>비밀번호</span>
-                    <input type="password">
-                </div>
-            </form>
-        </section>
-        <button type="submit" form="noti_write_form" class="list_write_btn">
-            GO TO LIST
-        </button>
-
+            </div>
+            <button class="list_write_btn">
+                GO TO LIST
+            </button>
+        </form>
     </main>
     <footer>
         <div class="f_top_wrap">
