@@ -41,7 +41,7 @@
 }
 
 .intro b {
-    font-family: basic_bold;
+    font-weight: 700;
 }
 
 .intro .bgtxt {
@@ -1290,7 +1290,7 @@
     }
 
     .cercle_wrap {
-        margin: 50px 0;
+        margin: 100px 0;
     }
 
     .cercle_wrap li {

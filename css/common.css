@@ -83,7 +83,7 @@ header {
     height: 120px;
     background-color: #074c43;
     font-family: "Noto Sans KR", sans-serif;
-    position: sticky;
+    position: fixed;
     z-index: 100;
     top: 0;
     left: 0;
@@ -194,6 +194,10 @@ header {
 }
 
 /*************************** 타이틀 시작 **************************/
+main{
+    margin-top: 120px;
+}
+
 .title {
     position: relative;
     width: 100%;
@@ -532,6 +536,10 @@ footer {
     }
 
     /* 타이틀 */
+    main{
+        margin-top: 80px;
+    }
+
     .title {
         margin-bottom: 50px;
     }
