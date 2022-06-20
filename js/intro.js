@@ -93,12 +93,12 @@ function navChange() {
         disappear(2);
         appear(0);
     }
-    if (window.pageYOffset + 600 >= absoluteTop2  && window.pageYOffset + 1000 < absoluteTop3 ) {
+    if (window.pageYOffset + 600 >= absoluteTop2  && window.pageYOffset + 1100 < absoluteTop3 ) {
         disappear(0);
         disappear(2);
         appear(1);
     }
-    if (window.pageYOffset + 1000 >= absoluteTop3 ) {
+    if (window.pageYOffset + 1100 >= absoluteTop3 ) {
         disappear(0);
         disappear(1);
         appear(2);
